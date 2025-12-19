@@ -42,15 +42,13 @@ export default function Login() {
 
 
   return (
-    <div className="min-h-screen overflow-hidden flex flex-col md:flex-row items-start">
-      <div className="w-full  md:w-1/2 h-screen bg-[#faf6f6] flex flex-col  items-center ml-8  md:p-6 rounded-bl-2xl rounded-br-2xl">
-        <div className="w-full ">
-          <Image src={logo} alt="Logo" className="h-40 w-50" /> Replace with your logo path
+    <div className="h-full md:h-screen w-full overflow-hidden flex flex-col md:flex-row items-start">
+      <div className="w-full  md:w-1/2 h-screen bg-[#faf6f6] flex flex-col  items-center   p-6 rounded-bl-2xl rounded-br-2xl">
+        <div className="w-full flex justify-center md:flex-row">
+          <Image src={logo} alt="Logo" className="h-40 w-50 md:w-full md:h-80" /> Replace with your logo path
         </div>
         <h2 className="text-[25px] text-black max-md:text-[20px]">Welcome To </h2>
-        <h2 className="text-[25px] text-black font-bold max-md:text-[20px]">
-          Renu Sharma Foundation !
-        </h2>
+        <h2 className="text-[25px] text-black font-bold mb-4 max-md:text-[20px]">Log In Page        </h2>
       
         <form onSubmit={handleSubmit(onSubmit)} className="w-full lg:ml-20 space-y-6">
           <div>
@@ -100,7 +98,7 @@ export default function Login() {
             <button type="button" className="text-blue-600 hover:underline cursor-pointer font-medium">
               Forgot your password?
             </button>
-             <input type="submit" />
+             
           </div>
 
           <button
@@ -110,12 +108,12 @@ export default function Login() {
             Login
           </button>
 
-          <div className="text-center mr-16 lg:mr-[12vh] items-center font-bold text-[12px] md:text-sm mt-2 ">
+          <div className="text-center text-black mr-16 lg:mr-[12vh] items-center font-bold text-[12px] md:text-sm mt-2 ">
             `Do not have an account?{' '}`
             <button
               type="button"
               onClick={() => {
-                navigate('/signup');
+                redirect('/SignUp');
               }}
               className="text-blue-600 cursor-pointer font-medium hover:underline"
             >

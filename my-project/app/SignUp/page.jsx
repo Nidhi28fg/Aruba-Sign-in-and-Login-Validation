@@ -1,6 +1,5 @@
 "use client"
 import { useState, useEffect } from "react";
-import { MdOutlineArrowDropDownCircle } from "react-icons/md";
 import { redirect } from 'next/navigation';
 
 export default function Signup() {
@@ -126,7 +125,7 @@ useEffect(() => {
       <div className="bg-[#041d42] text-white p-8 w-[85%]">
         <h2 className="text-[25px] max-md:text-[20px]">Welcome To </h2>
         <h2 className="text-[25px] font-bold max-md:text-[20px]">
-          Renu Sharma Foundation !
+          SignUp Page!
         </h2>
 
         <form onSubmit={validateFormInput}>
@@ -269,105 +268,17 @@ useEffect(() => {
             </label>
           </div>
           <span className="text-red-600 text-sm">{formError.gender}</span>
-          <div className="flex flex-col md:gap-4 sm:flex-col md:flex-row lg:flex-row">
-            <div>
-              <label className="flex flex-col gap-2 text-[14px] font-medium text-[#d9d9d9] max-md:text-base mt-3 mb-6 max-sm:mt-1.5 max-sm:mb-4.5">
-                College Name
-                <input
-                  value={formInput.collegename}
-                  onChange={({ target }) => {
-                    handleUserInput(target.name, target.value);
-                  }}
-                  className="border-2 border-white p-4 text-base rounded-4xl w-72   max-sm:w-65"
-                  type="text"
-                  name="collegename"
-                  placeholder="Your College Number"
-                />
-                <span className="text-red-600 text-sm">
-                  {formError.collegename}
-                </span>
-              </label>
-              <label className="flex flex-col gap-2 text-[14px] font-medium text-[#d9d9d9] max-md:text-base mt-3 mb-6 max-sm:mt-1.5 max-sm:mb-4.5">
-                Department
-                <div className="relative w-72 max-sm:w-65">
-                  <select
-                    name="department"
-                    id="year"
-                     value={formInput.department}
-                    onChange={({ target }) => {
-                      handleUserInput(target.name, target.value);
-                    }} 
-                    className="appearance-none text-sm flex items-center gap-22.5 max-sm:gap-15 border-2 border-white p-4 rounded-4xl w-72 max-sm:w-65"
-                  >
-                    <option value="">Choose your Department</option>
-                    <option value="kjdkjfkla">Choose your Department</option>
-                  </select>
-                  <MdOutlineArrowDropDownCircle
-                    size={25}
-                    className="absolute right-2.25 top-4.75"
-                  />
-                  <span className="text-red-600 text-sm">
-                    {formError.department}
-                  </span>
-                </div>
-              </label>
-            </div>
-            <div>
-              <label className="flex flex-col gap-2 text-[14px] font-medium text-[#d9d9d9] max-md:text-base mt-3 mb-6 max-sm:mt-1.5 max-sm:mb-4.5">
-                College Address
-                <input
-                  value={formInput.collegeaddress}
-                  onChange={({ target }) => {
-                    handleUserInput(target.name, target.value);
-                  }}
-                  className="border-2 border-white p-4 text-base rounded-4xl w-102.5   max-sm:w-65"
-                  type="text"
-                  name="collegeaddress"
-                  placeholder="Your College Address"
-                />
-                <span className="text-red-600 text-sm">
-                  {formError.collegename}
-                </span>
-              </label>
-
-              <label className="flex flex-col gap-2 text-[14px] font-medium text-[#d9d9d9] max-md:text-base mt-3 mb-6 max-sm:mt-1.5 max-sm:mb-4.5">
-                Year of Study
-                <div className="relative w-72 max-sm:w-65">
-                  <select
-                    name="yearofstudy"
-                    id="year"
-                     value={formInput.yearofstudy}
-                    onChange={({ target }) => {
-                      handleUserInput(target.name, target.value);
-                    }} 
-                    className="appearance-none flex items-center gap-22.5 max-sm:gap-15 border-2 border-white p-4 text-base rounded-4xl w-72 max-sm:w-65"
-                  >
-                    <option value="">Enter Current Year </option>
-                    <option value="1st Year">1st Year</option>
-                    <option value="2nd Year">2nd Year</option>
-                    <option value="3rd Year">3rd Year</option>{" "}
-                  </select>
-                  <MdOutlineArrowDropDownCircle
-                    size={25}
-                    className="absolute right-5.25 top-4.75"
-                  />
-                  <span className="text-red-600 text-sm">
-                    {formError.yearofstudy}
-                  </span>
-                </div>
-              </label>
-            </div>
-          </div>
+          
 
           <input
             type="submit"
             value="Sign Up"
             className="border-2 border-white text-black bg-white w-125 h-21 rounded-[38px] text-[34px] font-bold mt-7 mb-18
-              max-sm:w-72.5 max-sm:h-15 max-sm:text-[19px] max-sm:mt-4.25 max-sm:mb-9.25"
+              max-sm:w-72.5 max-sm:h-15 max-sm:text-[19px] max-sm:mt-4.25 "
           />
           <br/>
 
-          <a href="/Login" className="mb-40.25 text-[17px] text-[#e1e1e1] ml-6.25 max-w-[400px]:mb-[51px] max-w-[400px]:ml-0">
+          <a href="/Login" className="mb-4 text-[12px] md:text-xl text-[#e1e1e1] ml-6.25">
             {" "}
             Already have an account? <span className="text-[#41BDC5]">Sing in</span>
           </a>
