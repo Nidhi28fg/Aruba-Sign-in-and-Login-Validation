@@ -26,11 +26,10 @@ export default function Login() {
     return;
   }
 
-  const formInput = JSON.parse(saved); // yahan se email/password nikalo
+  const formInput = JSON.parse(saved); 
 
   const savedEmail = formInput.email;
-  const savedPassword = formInput.confirmpassword; // ya jo bhi field ho
-
+  const savedPassword = formInput.confirmpassword; 
   if (data.email === savedEmail && data.password === savedPassword) {
     setLoginError("");
     alert("Successfully Login...");
@@ -45,7 +44,7 @@ export default function Login() {
     <div className="h-full md:h-screen w-full overflow-hidden flex flex-col md:flex-row items-start">
       <div className="w-full  md:w-1/2 h-screen bg-[#faf6f6] flex flex-col  items-center   p-6 rounded-bl-2xl rounded-br-2xl">
         <div className="w-full flex justify-center md:flex-row">
-          <Image src={logo} alt="Logo" className="h-40 w-50 md:w-full md:h-80" /> Replace with your logo path
+          <Image src={logo} alt="Logo" className="h-40 w-full md:h-80" /> Replace with your logo path
         </div>
         <h2 className="text-[25px] text-black max-md:text-[20px]">Welcome To </h2>
         <h2 className="text-[25px] text-black font-bold mb-4 max-md:text-[20px]">Log In Page        </h2>
@@ -57,7 +56,7 @@ export default function Login() {
             {...register("email", { required: true })}
               type="email"
               placeholder="Email"
-              className="text-black w-[80%] md:w-[90%] lg:w-[80%] h-12 px-4 border border-gray-500 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 "
+              className="text-black w-full md:w-[90%] lg:w-[80%] h-12 px-4 border border-gray-500 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 "
             />
             {errors.email && <span>This field is required</span>}
 
@@ -69,7 +68,7 @@ export default function Login() {
               {...register("password", { required: true })}
               type={showPassword ? "text" : "password"}
               placeholder="Password"
-              className="text-black w-[80%] md:w-[90%] lg:w-[80%] h-12 px-4 border border-gray-500 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="text-black w-full md:w-[90%] lg:w-[80%] h-12 px-4 border border-gray-500 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <button
               type="button"
@@ -103,7 +102,7 @@ export default function Login() {
 
           <button
             type="submit"
-            className="w-[80%] md:w-[90%] lg:w-[80%] h-12 bg-[#121c37] text-white rounded-full cursor-pointer hover:bg-[#202d4e] transition"
+            className="w-full md:w-[90%] lg:w-[80%] h-12 bg-[#121c37] text-white rounded-full cursor-pointer hover:bg-[#202d4e] transition"
           >
             Login
           </button>

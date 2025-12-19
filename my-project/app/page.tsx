@@ -1,9 +1,9 @@
 
-import Login from "./Login/page"
+import SignUp from "./SignUp/page"
 export default function Home() {
   return (
     <div className="w-full h-screen">
-   <Login/>
+   <SignUp/>
     </div>
   );
 }

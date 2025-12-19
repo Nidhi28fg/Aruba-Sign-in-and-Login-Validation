@@ -122,7 +122,7 @@ useEffect(() => {
 
   return (
     <div className="flex w-full">
-      <div className="bg-[#041d42] text-white p-8 w-[85%]">
+      <div className="bg-[#041d42] text-white p-8 z-1 w-[85%]">
         <h2 className="text-[25px] max-md:text-[20px]">Welcome To </h2>
         <h2 className="text-[25px] font-bold max-md:text-[20px]">
           SignUp Page!
@@ -273,7 +273,7 @@ useEffect(() => {
           <input
             type="submit"
             value="Sign Up"
-            className="border-2 border-white text-black bg-white w-125 h-21 rounded-[38px] text-[34px] font-bold mt-7 mb-18
+            className="border-2 border-white text-black bg-white w-125 h-21 rounded-[38px] text-[34px] font-bold mt-7 mb-2
               max-sm:w-72.5 max-sm:h-15 max-sm:text-[19px] max-sm:mt-4.25 "
           />
           <br/>
@@ -284,7 +284,7 @@ useEffect(() => {
           </a>
         </form>
       </div>
-      <div className="bg-[#41BDC5] w-[15%]"></div>
+      <div className="bg-[#41BDC5] w-[15%] z-0"></div>
     </div>
   );
 }
