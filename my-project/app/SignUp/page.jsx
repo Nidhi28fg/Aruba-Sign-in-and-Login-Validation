@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { redirect } from 'next/navigation';
 
+
 export default function Signup() {
   const [formInput, setFormInput] = useState({
     username: "",
@@ -92,18 +93,7 @@ export default function Signup() {
     if (!formInput.gender) {
       inputError.gender = "please choose your gender";
     }
-    if (!formInput.collegename) {
-      inputError.collegename = "please enter your College Name";
-    }
-    if (!formInput.department) {
-      inputError.department = "please enter your department";
-    }
-    if (!formInput.collegeaddress) {
-      inputError.collegeaddress = "please enter College Address";
-    }
-    if (!formInput.yearofstudy) {
-      inputError.yearofstudy = "please enter Your Year of Study";
-    }
+    
     setFormError(inputError);
      const hasError = Object.values(inputError).some((msg) => msg !== "");
     if (!hasError) {
@@ -269,7 +259,6 @@ useEffect(() => {
           </div>
           <span className="text-red-600 text-sm">{formError.gender}</span>
           
-
           <input
             type="submit"
             value="Sign Up"
