@@ -243,7 +243,7 @@ export default function SignupPage() {
 
             {/* Login Link */}
             <Grid container justifyContent="center">
-              <Grid item>
+              <Grid  size={12}>
                 <Typography variant="body2">
                   Already have an account?{' '}
                   <Link

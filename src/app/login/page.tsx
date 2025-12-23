@@ -180,7 +180,7 @@ export default function LoginPage() {
 
             {/* Sign Up Link */}
             <Grid container justifyContent="center">
-              <Grid item>
+              <Grid size={12}>
                 <Typography variant="body2">
                   Don&apos;t have an account?{' '}
                   <Link
