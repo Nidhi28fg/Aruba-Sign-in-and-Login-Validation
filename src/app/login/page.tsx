@@ -12,6 +12,9 @@ import Alert from '@mui/material/Alert'
 import CustomTextField from '@/components/CustomTextField'
 import PasswordInput from '@/components/PasswordInput'
 import { validateEmail } from '@/utils/validation'
+import * as motion from "motion/react-client"
+
+
 
 /**
  * Login page component
@@ -70,6 +73,22 @@ export default function LoginPage() {
       setIsSubmitting(false)
     }
   }
+const box = {
+    width: 100,
+    height: 100,
+    backgroundColor: "#0920ecff",
+    borderRadius: 5,
+    
+}
+
+const ball = {
+    width: 100,
+    height: 100,
+    backgroundColor: "#dd00ee",
+    borderRadius: "50%",
+}
+
+
 
   return (
     <Box
@@ -82,7 +101,20 @@ export default function LoginPage() {
         padding: { xs: 2, sm: 3 },
       }}
     >
+
       <Container maxWidth="sm">
+         <Box
+       sx={{
+              display: 'flex',
+              justifyContent:'left',   
+      }}
+        >
+        <motion.div
+            style={box}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 15 }}
+        />
+        </Box>
         <Paper
           elevation={8}
           sx={{
@@ -197,8 +229,27 @@ export default function LoginPage() {
                 </Typography>
               </Grid>
             </Grid>
+            
           </Box>
-        </Paper>
+        </Paper> 
+        <Box
+       sx={{
+              display: 'flex',
+              justifyContent:'right',
+              zIndex:1,
+    
+      }}
+        >
+        <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 4,
+                scale: { type: "spring", visualDuration: 4, bounce: 5 },
+            }}
+            style={ball}
+        />
+        </Box>
       </Container>
     </Box>
   )
